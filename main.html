@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sigma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main_wrapper">
+
+        <div class="in_out_outer_wrapper">
+            <div class="title_text">Исходные данные</div>
+            <div class="in_out_inner_wrapper">
+                <div class="block_wrapper">
+                    <div class="table_text">Паспортные данные</div>
+                    <div class="block_inner_wrapper">
+
+                        <div class="half_wrapper">
+                            <div class="left_line left_line_padding">Показатели</div>
+                            <div class="left_line left_line_margin">L</div>
+                            <div class="left_line left_line_margin">Dвн</div>
+                            <div class="left_line left_line_margin">dст</div>
+                            <div class="left_line left_line_margin">Кэкв/шер</div>
+                        </div>
+
+                        <div class="half_wrapper second_half">
+
+                            <div class="half_wrapper center">
+                                <div>Ед. изм.</div>
+                                <div class="input_style input_padding">км</div>
+                                <div class="input_style input_padding">мм</div>
+                                <div class="input_style input_padding">мм</div>
+                                <div class="input_style input_padding">мм</div>
+                            </div>
+
+                            <div class="half_wrapper center">
+                                <div>Значения</div>
+                                <input class="input_style" type="number" value=0>
+                                <input class="input_style" type="number" value=0>
+                                <input class="input_style" type="number" value=0>
+                                <input class="input_style" type="number" value=0>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="block_wrapper">
+                    <div class="table_text">Оперативные данные</div>
+                    <div class="block_inner_wrapper">
+
+                        <div class="half_wrapper">
+                            <div class="left_line left_line_padding">Показатели</div>
+                            <div class="left_line left_line_margin">Кто</div>
+                            <div class="left_line left_line_margin">Кэф</div>
+                            <div class="left_line left_line_margin">Тос_тр</div>
+                        </div>
+
+                        <div class="half_wrapper second_half">
+
+                            <div class="half_wrapper center">
+                                <div>Ед. изм.</div>
+                                <div class="input_style input_padding">Вт /(м²*К)</div>
+                                <div class="input_style input_padding">-</div>
+                                <div class="input_style input_padding">С</div>
+                            </div>
+
+                            <div class="half_wrapper center">
+                                <div>Значения</div>
+                                <input class="input_style" type="number" value=0>
+                                <input class="input_style" type="number" value=0>
+                                <input class="input_style" type="number" value=0>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="block_wrapper">
+                    <div class="table_text">Параметры потока</div>
+                    <div class="block_inner_wrapper">
+
+                        <div class="half_wrapper">
+                            <div class="left_line left_line_padding">Показатели</div>
+                            <div class="left_line left_line_margin">Pвх</div>
+                            <div class="left_line left_line_margin">Твх</div>
+                            <div class="left_line left_line_margin">Q</div>
+                        </div>
+
+                        <div class="half_wrapper second_half">
+
+                            <div class="half_wrapper center">
+                                <div>Ед. изм.</div>
+                                <div class="input_style input_padding">МПа</div>
+                                <div class="input_style input_padding">С</div>
+                                <div class="input_style input_padding">млн м³/сут</div>
+                            </div>
+
+                            <div class="half_wrapper center">
+                                <div>Значения</div>
+                                <input class="input_style" type="number" value=0>
+                                <input class="input_style" type="number" value=0>
+                                <input class="input_style" type="number" value=0>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="in_out_outer_wrapper">
+            <div class="title_text">Результаты расчета</div>
+            <div class="in_out_inner_wrapper">
+                <div class="block_wrapper">
+                    <div class="table_text">Расчетные параметры потока</div>
+                    <div class="block_inner_wrapper">
+
+                        <div class="half_wrapper">
+                            <div class="left_line left_line_padding">Показатели</div>
+                            <div class="left_line left_line_margin">Pвых</div>
+                            <div class="left_line left_line_margin">Твых</div>
+                        </div>
+
+                        <div class="half_wrapper second_half">
+
+                            <div class="half_wrapper center">
+                                <div>Ед. изм.</div>
+                                <div class="input_style input_padding input_inactive">МПа</div>
+                                <div class="input_style input_padding input_inactive">С</div>
+                            </div>
+
+                            <div class="half_wrapper center">
+                                <div>Значения</div>
+                                <div class="input_style input_padding input_inactive"></div>
+                                <div class="input_style input_padding input_inactive"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="calculate_button center" id="calc_button">Рассчитать</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
