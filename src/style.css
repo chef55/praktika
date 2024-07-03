@@ -29,7 +29,9 @@ html,body {
 .in_out_outer_wrapper {
     margin-left: 53px;
     margin-top: 55px;
-    border: 1px, solid, #0079C2;
+    border-width: 1px;
+    border-style:  solid;
+    border-color: #0079C2;
     border-radius: 20px;
     width: 584px;
     height: 819px;
