@@ -1,4 +1,3 @@
-import '../App.css';
 import React from 'react'
 import UnitQuarter from './UnitQuarter';
 import InputQuarter from './InputQuarter';
