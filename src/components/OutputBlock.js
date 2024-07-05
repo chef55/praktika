@@ -1,4 +1,3 @@
-import '../App.css';
 import React from 'react'
 import ParameterHalf from './ParameterHalf';
 import OutputHalf from './OutputHalf';
