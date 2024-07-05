@@ -22,7 +22,7 @@ const initialState={
     initialState,
     reducers:{
       update: (state,action)=>{
-        state.value=action.payload;
+        state.value[action.payload.name]=action.payload.value;
       },
       calculate: (state)=>{
         let {L,Dvn,dst,Kekv,Kto,Kef,Tos,Pvh,Tvh,Q,P,T}=state.value
