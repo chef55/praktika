@@ -21,8 +21,10 @@ const initialState={
     name: 'inout',
     initialState,
     reducers:{
-      calculate: (state,action)=>{
+      update: (state,action)=>{
         state.value=action.payload;
+      },
+      calculate: (state)=>{
         let {L,Dvn,dst,Kekv,Kto,Kef,Tos,Pvh,Tvh,Q,P,T}=state.value
         state.value.P=parseFloat(L)+parseFloat(Dvn)
         state.value.T=parseFloat(dst)-parseFloat(Kekv)
@@ -30,5 +32,5 @@ const initialState={
     }
   })
 
-  export const { calculate } = ioSlice.actions;
+  export const { update,calculate } = ioSlice.actions;
   export default ioSlice.reducer;
