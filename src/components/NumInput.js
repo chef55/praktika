@@ -1,24 +1,16 @@
-import '../App.css';
 import React from 'react'
-
-export let currentValues={
-    L: 0,
-    Dvn: 0,
-    dst: 0,
-    Kekv: 0,
-    Kto: 0,
-    Kef: 0,
-    Tos: 0,
-    Pvh: 0,
-    Tvh: 0,
-    Q: 0,
-  }
+import { useDispatch } from 'react-redux';
+import {useSelector} from "react-redux"
+import { update } from '../slices/inout';
   
   function NumInput(props){
+    const dispatch=useDispatch();
+    let current=JSON.parse(JSON.stringify(useSelector((state)=>state.inout.value)))
     return(
       <>
-      <input className="input_style" type="number" defaultValue={0} id={props.input_id} onChange={(event)=>{
-        currentValues[props.input_id]=event.target.value
+      <input className="input_style" type="number" defaultValue={0} id={props.input_id} onBlur={(event)=>{
+        current[props.input_id]=event.target.value
+        dispatch(update(current))
       }}></input>
       </>
     );
