@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Req } from '@nestjs/common';
 import { Request, Response } from 'express';
-
+import {findPk,findTk} from './calculations'
 @Controller()
 export class AppController {
 
@@ -13,11 +13,9 @@ export class AppController {
   @Post()
   calculateValues(@Req() request: Request){
     console.log('Posted')
-    const {L,Dvn,dst,Kekv,Kto,Kef,Tos,Pvh,Tvh,Q}=request.body
-    const responseData={
-      T: parseFloat(L)+parseFloat(Dvn),
-      P: parseFloat(dst)-parseFloat(Kekv)
-    }
-    return responseData
+    const {L,d,dst,K,Ksr,E,To,Pn,Tn,q}=request.body
+    let Pk=findPk(L,d,dst,K,Ksr,E,To,Pn,Tn,q)
+    let Tk=findTk(L,d,dst,K,Ksr,E,To,Pn,Tn,q,Pk)
+    return {T:Tk.toFixed(4),P:Pk.toFixed(4)}
   }
 }

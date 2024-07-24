@@ -10,11 +10,13 @@ html,body {
 .input_padding {
     text-align: left;
     padding-left: 10px;
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 
 .left_line_padding {
     padding-left: 35px;
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 
@@ -108,6 +110,7 @@ input[type="number"] {
     font-weight: inherit;
     font-style: inherit;
     text-align: inherit;
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: textfield;
     display: inherit;
@@ -118,6 +121,10 @@ input[type="number"]:focus {
     outline: none;
     transition: 0.3s;
     box-shadow: inset 0px 0px 0px 1px #0079C2;
+}
+input[type="number"]::selection {
+    color: white;
+    background: #0079C2;
 }
 
 .input_style {
@@ -130,6 +137,56 @@ input[type="number"]:focus {
     margin-top: 13px;
     display: grid;
     align-items: center;
+}
+.input_style_error {
+    box-shadow: inset 0px 0px 0px 1px #ffb5b5;
+    background: #fff1f1;
+    transition: 0.3s;
+}
+
+input[type="number"][class~="input_style_error"]:focus {
+    outline: none;
+    box-shadow: inset 0px 0px 0px 1px #ff6161;
+    transition: 0.3s;
+}
+
+/*input[type="number"][class~="input_style_error"]::selection {
+    color: white;
+    background: #ff6161;
+}*/
+
+.error_exclamation{
+    position: absolute;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px #C4C4C4;
+    top:5px;
+    left:123px;
+    font-weight: 500;
+    color:#8a8a8a;
+    text-align: center;
+    line-height: 22px;
+    user-select: none;
+}
+
+.error_message{
+    text-align: left;
+    z-index: 10;
+    position: absolute;
+    box-shadow: inset 0px 0px 0px 1px #C4C4C4;
+    background: #FFFFFF;
+    top:0px;
+    padding:10px;
+    left:150px;
+    min-width: 200px;
+    max-width: 400px;
+    overflow-wrap: normal;
+    display: none;
+}
+
+.error_exclamation:hover + .error_message{
+    display:block;
 }
 
 .input_inactive{
@@ -155,11 +212,21 @@ input[type="number"]:focus {
     transition:0.2s;
 }
 
-
 .calculate_button:hover{
     transition: 0.2s;
     background: #1CA4F3;
     cursor: pointer;
+}
+
+.calculate_button_inactive{
+    transition:0.2s;
+    color: #A1A1A1;
+    background: #E7E7E7;
+}
+.calculate_button_inactive:hover{
+    color: #A1A1A1;
+    background: #E7E7E7;
+    cursor:default;
 }
 
 input::-webkit-outer-spin-button,
